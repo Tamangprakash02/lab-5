@@ -2,8 +2,10 @@ Random dice = new Random();
 int roll1 = dice.Next(1, 7);
 int roll2 = dice.Next(1, 7);
 int roll3 = dice.Next(1, 7);
+
 int total = roll1 + roll2 + roll3;
 Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
+
 if ((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3)) {
     if ((roll1 == roll2) && (roll2 == roll3)) {
         Console.WriteLine("You rolled triples!  +10 bonus to total!");
@@ -13,4 +15,4 @@ if ((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3)) {
         total += 2;
     }
 }
-//theres no whitespaces which makes the code hard to understand
+//added whitespaces to make the code more readable
